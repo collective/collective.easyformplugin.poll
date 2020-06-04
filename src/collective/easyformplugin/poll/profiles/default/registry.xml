@@ -4,5 +4,9 @@
     i18n:domain="collective.easyformplugin.poll">
 
 <!-- -*- extra stuff goes here -*- -->
+    <records prefix="plone.resources/collective.easyformplugin.poll"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+        <value key="js">++plone++collective.easyformplugin.poll/Chart.bundle.min.js</value>
+    </records>
 
 </registry>

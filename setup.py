@@ -49,9 +49,9 @@ setup(
         'setuptools',
         # -*- Extra requirements: -*-
         'z3c.jbot',
+        'collective.easyform',
         'Products.GenericSetup>=1.8.2',
         'plone.api>=1.8.4',
-        'plone.restapi',
         'plone.app.dexterity',
     ],
     extras_require={

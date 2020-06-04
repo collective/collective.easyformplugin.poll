@@ -17,5 +17,29 @@
       type="plone"
       directory="static"
       />
+      
+      
+  <browser:page
+      name="polldata"
+      for="collective.easyform.interfaces.IEasyForm"
+      permission="cmf.ModifyPortalContent"
+      class=".view.PollSavedDataView"
+      template="saveddata.pt"
+      />
+  <browser:page
+      name="polls"
+      for="collective.easyform.interfaces.IEasyForm"
+      permission="cmf.ModifyPortalContent"
+      class=".view.EasyFormActionsView"
+      layer="collective.easyform.interfaces.IEasyFormLayer"
+      allowed_interface="collective.easyform.interfaces.IEasyFormActionsContext"
+      />
+  <browser:page
+      name="pollview"
+      for="collective.easyform.interfaces.IEasyFormActionContext"
+      permission="cmf.ModifyPortalContent"
+      class=".view.ActionPollDataView"
+      layer="collective.easyform.interfaces.IEasyFormLayer"
+      />
 
 </configure>
