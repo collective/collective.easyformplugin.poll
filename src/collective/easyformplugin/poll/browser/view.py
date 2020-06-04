@@ -18,33 +18,8 @@ from Products.Five import BrowserView
 
 class PollSavedDataView(SavedDataView):
     """View for Saved Polls"""
-    # def items(self):
-    #     actionlist = [
-    #         (name, action.__doc__)
-    #         for name, action in getFieldsInOrder(get_actions(self.context))
-    #         if IPollSaveData.providedBy(action)
-    #     ]
-    #     return actionlist
 
 
-# class PollDataForm(SavedDataForm):
-#     """View for Saved Poll Form"""
-#     template = ViewPageTemplateFile("saveddata_form.pt")
-
-
-# @implementer(ISavedDataFormWrapper)
-# class PollDataFormWrapper(layout.FormWrapper):
-#     def __call__(self):
-#         if hasattr(self.request, "form.buttons.download"):
-#             self.context.field.download(self.request.response)
-#             return u""
-#         else:
-#             return super(PollDataFormWrapper, self).__call__()
-
-
-# ActionPollDataView = layout.wrap_form(
-#     PollDataForm, __wrapper_class=PollDataFormWrapper
-# )
 class ActionPollDataView(BrowserView):
     template = ViewPageTemplateFile("poll.pt")
 

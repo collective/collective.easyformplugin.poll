@@ -6,10 +6,13 @@ from collective.easyform.actions import SaveData
 from collective.easyform.actions import getFieldsInOrder
 from collective.easyform.actions import get_context
 from collective.easyform.actions import get_schema
+from plone import api
 from plone.supermodel.exportimport import BaseHandler
+from zope.annotation.interfaces import IAnnotations
 from zope.interface import implementer
 
 from collective.easyformplugin.poll import _
+from collective.easyformplugin.poll import CEFPSS, CEFPSV
 from collective.easyformplugin.poll.interfaces import IPoll
 from collective.easyformplugin.poll.interfaces import IPollSaveData
 
@@ -69,6 +72,21 @@ class PollSaveData(SaveData):
             if not showFields or name in showFields
         }
         return names
+
+
+    def onSuccess(self, fields, request):
+        context = get_context(self)
+        annotations = IAnnotations(context)
+        singleSubmission = annotations.get(CEFPSS, False)
+        voters = annotations.get(CEFPSV, [])
+        if not api.user.is_anonymous():
+            auth_user = api.user.get_current()
+            if singleSubmission and auth_user.id in voters:
+                return False
+            voters.append(auth_user.id)
+            annotations[CEFPSV] = voters
+        super(PollSaveData, self).onSuccess(fields, request)
+        
 
 
 PollAction = ActionFactory(

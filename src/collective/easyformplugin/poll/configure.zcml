@@ -12,8 +12,8 @@
     Better import explicite packages or configurations ;)
   -->
   <!--<includeDependencies package="." />-->
-
   <include package=".browser" />
+  <include file="behaviors.zcml" />
   <include file="easyform.zcml" />
 
   <include file="permissions.zcml" />

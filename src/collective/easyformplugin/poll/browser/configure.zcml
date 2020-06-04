@@ -42,4 +42,15 @@
       layer="collective.easyform.interfaces.IEasyFormLayer"
       />
 
+
+    <browser:viewlet
+      name="pollblock"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+      template="pollblock.pt"
+      class=".viewlet.PollEasyFormViewlet"
+      layer="collective.easyform.interfaces.IEasyFormLayer"
+      for="collective.easyformplugin.poll.interfaces.IManageSubmissionMarker"
+      permission="zope2.View"
+      />
+
 </configure>

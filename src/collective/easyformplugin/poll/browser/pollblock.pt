@@ -1,0 +1,15 @@
+<tal:block tal:condition="view/allowSingleSubmission">
+    <div class="alert alert-danger" role="alert">
+      You've already submitted!!!
+      We are not accepting anymore votes at this time.
+    </div>
+    <script>
+        $(document).ready(function(){
+           $("form.easyformForm input").attr('disabled', 'disabled');
+           $("form.easyformForm").on("submit", function(e){
+               e.preventDefault();
+               alert("We are not accepting anymore votes at this time.");
+           })
+        });
+    </script>
+</tal:block>

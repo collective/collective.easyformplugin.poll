@@ -6,6 +6,7 @@ from collective.easyform.interfaces import ISaveData
 from plone.autoform import directives
 
 from zope import schema
+from zope.interface import Interface
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 from collective.easyformplugin.poll import _
@@ -13,6 +14,10 @@ from collective.easyformplugin.poll import _
 
 class ICollectiveEasyformpluginPollLayer(IDefaultBrowserLayer):
     """Marker interface that defines a browser layer."""
+
+
+class IManageSubmissionMarker(Interface):
+    """Marker"""
 
 
 class IPoll(IAction):

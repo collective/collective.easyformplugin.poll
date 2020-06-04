@@ -2,37 +2,20 @@
    If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
    This text does not appear on pypi or github. It is a comment.
 
-==============================
+==================================
 collective.easyformplugin.poll
-==============================
+==================================
 
-Tell me what your product does
+EasyForm plugin for conducting online polls, for anonymous and logged-in users.
 
 Features
---------
+--------------
 
-- Can be bullet points
-
-
-Examples
---------
-
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
-
-
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
-
-
-Translations
-------------
-
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
+- Polls can be opened for anonymous users to vote
+- If an open poll is allowed for anonymous but is inside a private folder, nobody can vote. Therefore the poll's parent folder needs to be published before opening the poll in order for this field to take effect
+- Users can see partial results of the poll if necessary
+- Results can be shown using a pie chart
+- Polls can have relations with other content in the site
 
 
 Installation
@@ -59,11 +42,18 @@ Contribute
 - Documentation: https://docs.plone.org/foo/bar
 
 
+TODOs
+--------
+- Use a field as a unique identifier
+- Allow editors to choose the type of graph to display the pool
+- Add open and close workflow state
+
+
 Support
 -------
 
 If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
+We have a mailing list located at: oshane@alteroo.com
 
 
 License
