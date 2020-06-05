@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='collective.easyformplugin.poll',
-    version='1.0a1',
+    version='1.0.0',
     description="Poll support for EasyForm",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
@@ -23,6 +23,7 @@ setup(
         "Framework :: Plone",
         "Framework :: Plone :: Addon",
         "Framework :: Plone :: 5.0",
+        "Framework :: Plone :: 5.1",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",
         "Operating System :: OS Independent",
