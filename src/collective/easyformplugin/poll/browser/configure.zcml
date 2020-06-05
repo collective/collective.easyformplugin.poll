@@ -29,7 +29,7 @@
   <browser:page
       name="polls"
       for="collective.easyform.interfaces.IEasyForm"
-      permission="cmf.ModifyPortalContent"
+      permission="zope2.View"
       class=".view.EasyFormActionsView"
       layer="collective.easyform.interfaces.IEasyFormLayer"
       allowed_interface="collective.easyform.interfaces.IEasyFormActionsContext"
@@ -37,7 +37,7 @@
   <browser:page
       name="pollview"
       for="collective.easyform.interfaces.IEasyFormActionContext"
-      permission="cmf.ModifyPortalContent"
+      permission="zope2.View"
       class=".view.ActionPollDataView"
       layer="collective.easyform.interfaces.IEasyFormLayer"
       />
@@ -45,7 +45,7 @@
 
     <browser:viewlet
       name="pollblock"
-      manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+      manager="plone.app.layout.viewlets.interfaces.IGlobalStatusMessage"
       template="pollblock.pt"
       class=".viewlet.PollEasyFormViewlet"
       layer="collective.easyform.interfaces.IEasyFormLayer"

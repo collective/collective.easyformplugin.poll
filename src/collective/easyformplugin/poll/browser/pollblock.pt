@@ -1,5 +1,5 @@
 <tal:block tal:condition="view/allowSingleSubmission">
-    <div class="alert alert-danger" role="alert">
+    <div class="portalMessage error" role="alert">
       You've already submitted!!!
       We are not accepting anymore votes at this time.
     </div>
